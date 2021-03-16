@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block loop %}
+    <h2>Список профессий</h2>
+    <p>
+        {% set const = "Каюта №"%}
+        {% for elem in sp %}
+        {{ elem }} - {{ const }} {{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}<br>
+        {% endfor %}
+    </p>
+{% endblock %}
